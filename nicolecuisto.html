@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<!--Language du contenu-->
+
+<head>
+    <!--Déclaration du jeu de caractère-->
+    <meta charset="utf-8">
+    <!-- Liaison entre CSS et HTML-->
+    <link rel="stylesheet" type="text/css" href="style.css" media="all"> 
+    <!--Instructions relatives à la taille et à l'échelle du viewport aux navigateurs mobiles-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Titre s'affichant sur l'onglet-->
+    <title>nicolecuisto</title>
+    
+</head>
+
+
+<body>
+    <header>
+        <nav class="navigation">
+            <!--La balise nav permet de créer des menus-->
+            <img src="Images/nicolecuisto.png" class="logo">
+            <a href="#lesvaleurs">Les valeurs </a>
+            <a href="#lechef">Le chef</a>
+            <a href="#lerestaurant">Le restaurant</a>
+            <a href="#lesrecettes">Les recettes</a>
+            <a href="#livredor">Livre d'or</a>
+            <a href="#reservation">Réservation</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+
+            <article id="lesvaleurs" class="container1">
+                <img src="Images/lesvaleurs.png">
+                <div class="text-block">
+                    <h2>Les valeurs</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </article>
+
+            <article id="lechef" class="container2">
+                <img src="Images/lechef.jpg">
+                <div class="text-block">
+                    <h2>Le Chef</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </article>
+
+            <article id="lerestaurant" class="container3">
+                <img src="Images/latable.jpg" style="width : 60%;">
+                <div class="text-block">
+                    <h2>Le restaurant</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </article>            
+            
+            <article id="lesrecettes" class="ligne">
+                <div class="colonne">
+                    <img src="Images/axoa.jpg"><br>
+                    <a href="lesrecettes.html">La recette 1</a>
+                </div>
+                <div class="colonne">
+                    <img src="Images/axoa.jpg"><br>
+                    <a href="lesrecettes2.html">La recette 2</a>
+                </div>
+                <div class="colonne">
+                    <img src="Images/axoa.jpg"><br>
+                    <a href="lesrecettes3.html">La recette 3</a>
+                </div>
+            </article>
+
+            <div id="livredor" class="slideshow-container">
+                <h1>Livre d'Or</h1>    
+                <div class="mySlides">
+                    <q>orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</q>
+                    <p class="author">- Personne 1</p>
+                </div>  
+                <div class="mySlides">
+                    <q>Borem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</q>
+                    <p class="author">- Personne 2</p>
+                </div>
+                <div class="mySlides">
+                    <q>orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</q>
+                    <p class="author">- Personne 3</p>
+                </div>
+  
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+
+                <div class="dot-container">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            
+        </section>
+
+    </main>
+
+</body>
+
+<footer>
+    <p>Rien</p>
+</footer>
+
+</html>
