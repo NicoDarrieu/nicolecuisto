@@ -6,31 +6,79 @@
     <!--Déclaration du jeu de caractère-->
     <meta charset="utf-8">
     <!-- Liaison entre CSS et HTML-->
-    <link rel="stylesheet" type="text/css" href="style.css" media="all"> 
+    <link rel="stylesheet" type="text/css" href="style.css" media="all">     
     <!--Instructions relatives à la taille et à l'échelle du viewport aux navigateurs mobiles-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Titre s'affichant sur l'onglet-->
     <title>nicolecuisto</title>
-    
-</head>
 
+</head>
 
 <body>
     <header>
         <nav class="navigation">
-            <!--La balise nav permet de créer une barre de navigation-->
+            <!--La balise nav pour la création d'une barre de navigation-->
             <img src="Images/nicolecuisto.png" class="logo">
             <a href="#lesvaleurs">Les valeurs </a>
             <a href="#lechef">Le chef</a>
             <a href="#lerestaurant">Le restaurant</a>
             <a href="#lesrecettes">Les recettes</a>
             <a href="#livredor">Livre d'or</a>
-            <a href="#reservation">Réservation</a>
+            <a id="Contact">Contact </a>
+                <div id="modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div class="container5">
+                            <form action="" id="frm">
+                          
+                              <label for="nom">Nom*</label>
+                              <input type="text" id="nom" name="nomfamille" placeholder="Votre nom..." required />
+                          
+                              <label for="prenom">Prénom</label>
+                              <input type="text"  id="prenom" name="prenomfamille" placeholder="Votre prénom..." required />
+
+                              <label for="email">E-mail*</label>
+                              <input type="email" id="mail" name="mailperso" placeholder="Votre email..." required />
+                          
+                              <div class="rowf">
+                                <div class="col50">
+                                    <label for="telephone">Téléphone fixe</label>
+                                    <input type="tel" id="telephone" name="telephonefixe" pattern = "d{10}" placeholder="Votre numéro de téléphone fixe..." required />
+                                </div>
+                                <div class="col50">
+                                    <label for="portable">Portable</label>
+                                    <input type="tel" id="portable" name="telephoneportable" pattern = "d{10}" placeholder="Votre numéro de téléphone portable..." required />
+                                </div>
+                            </div>                                                   
+                              <label for="adresse">Adresse</label>
+                              <input type="text" id="adresse" name="adressedomicile" placeholder="Votre adresse...">
+
+                                <div class="rowf">
+                                    <div class="col50">
+                                        <label for="ville">Ville</label>
+                                        <input type="text" id="ville" name="villenaissance" placeholder="Exemple : Orthez">
+                                    </div>
+                                    <div class="col50">
+                                        <label for="code">Code postal</label>
+                                        <input type="number" min="01000" max ="99999" maxlength ="5" required  id="code" name="codepostal" placeholder="Exemple : 64300">
+                                    </div>
+                                </div>
+                          
+                              <label for="commentaire">Commentaire</label>
+                              <textarea id="commentaire" name="commentaireclient" placeholder="Votre commentaire ici.." style="height:200px"></textarea>
+                          
+                              <input type="submit" value="Soumettre">
+                              <input type="reset" value="Réinitialiser" onclick="resetForm();">
+                            </form>
+                          </div>
+                    </div>
+                </div>
         </nav>
     </header>
 
     <main>
-    <!-- Contenu principal-->    
+        <!-- Contenu principal-->
+
         <section>
             <article id="lesvaleurs" class="container1">
                 <img src="Images/lesvaleurs.png">
@@ -60,55 +108,58 @@
                         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                         laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div>
-            </article>            
-            
-            <article id="lesrecettes" class="ligne">
-                <div class="colonne">
+            </article>
+
+            <article id="lesrecettes" class="ligne1">
+                <div class="colonne1">
                     <img src="Images/axoa.jpg"><br>
                     <a href="lesrecettes.html">La recette 1</a>
                 </div>
-                <div class="colonne">
+                <div class="colonne1">
                     <img src="Images/loremipsum.jpg"><br>
                     <a href="lesrecettes2.html">La recette 2</a>
                 </div>
-                <div class="colonne">
+                <div class="colonne1">
                     <img src="Images/fondue.jpg"><br>
                     <a href="lesrecettes3.html">La recette 3</a>
                 </div>
             </article>
 
-            <div id="livredor" class="slideshow-container">
+            <article id="livredor" class="defilement">
                 <h1>Livre d'Or</h1>
-                <!-- Série de 3 commentaires-->      
-                <div class="mySlides">
+                <!-- Série de 3 commentaires-->
+                <div class="slides">
                     <q>orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</q>
                     <p class="author">- Personne 1</p>
-                </div>  
-                <div class="mySlides">
+                </div>
+                <div class="slides">
                     <q>Borem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</q>
                     <p class="author">- Personne 2</p>
                 </div>
-                <div class="mySlides">
+                <div class="slides">
                     <q>orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</q>
                     <p class="author">- Personne 3</p>
-                </div>
-  
+                </div>            
+                
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                </div>
 
                 <div class="dot-container">
                     <span class="dot" onclick="currentSlide(1)"></span>
                     <span class="dot" onclick="currentSlide(2)"></span>
                     <span class="dot" onclick="currentSlide(3)"></span>
                 </div>
-            
+
+            </article>
+
+
         </section>
     </main>
-</body>
-
 <footer>
     <p>Rien</p>
 </footer>
+<!-- Liaison entre JS et HTML, à la fin-->
+<script type="text/javascript" src="Javascript/script.js"></script> 
+</body>
 
 </html>

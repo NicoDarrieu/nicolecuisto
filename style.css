@@ -1,6 +1,8 @@
-                                                                              /* PAGE D'ACCUEIL*/
+/* PAGE D'ACCUEIL*/
 
-.logo {                                                                          /* Logo, en haut à gauche dans la barre de navigation*/
+/* Barre de navigation*/
+/* Logo, en haut à gauche dans la barre de navigation*/
+.logo {            
   float: left;
   vertical-align: top;
   width: 100px;
@@ -10,7 +12,8 @@
   margin-bottom: auto;
 }
 
-.navigation {                                                                      /*Barre de navigation fixe*/
+/*Barre de navigation fixe*/
+.navigation {                                                                     
   background-color: rgb(0, 0, 0, .7);
   text-align: center;
   overflow: hidden;
@@ -20,8 +23,9 @@
   width: 100%;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-  
-.navigation a {                                                                    /*Style du texte de la barre de navigation*/
+
+/*Style du texte de la barre de navigation*/
+.navigation a {       
   float: left;
   display: block;
   color: #ffffff;
@@ -30,18 +34,24 @@
   text-decoration: none;
   font-size: 17px;
 }
-  
-.navigation a:hover {                                                               /*Hover : action lors du passage du curseur*/
+
+/*Hover : action lors du passage du curseur sur les éléments de la barre de navigation*/
+.navigation a:hover {                                                               
   background-color: rgb(70, 68, 68);
   color: black;
 }
-   
-.navigation a:active {                                                               /*Active : action lors du click*/
+
+/*Active : action lors du click*/
+.navigation a:active {                                                              
   background-color: #ffffff;
   color: white;
 }
+/*________________________________________________________________________________________________________*/
+/*BODY*/
 
-.container1 {                                                                         /*Style du 1er article*/
+/*Article*/
+/*Style du 1er article*/
+.container1 {                                                                         
   padding-top: 200px;
   padding-bottom: 200px;
   width : 400 px;
@@ -49,7 +59,8 @@
   text-align : center;
 }
 
-.container2 {                                                                         /*Style des articles suivants*/
+/*Style du 2eme article*/
+.container2 {                                                                         
   padding-top: auto;
   padding-bottom: 150px;
   width : 100%;
@@ -57,8 +68,8 @@
   position :static;
   text-align : center;
 }
-
-.container3 {                                                                         /*Style des articles suivants*/
+/*Style du 3eme article*/
+.container3 {                                                                         
     
   margin-top: auto;
   padding-bottom: 100px;
@@ -67,7 +78,8 @@
   text-align : center;
 }
 
-.text-block {                                                                         /*Style des textes sous les images*/
+/*Style des textes sous les images*/
+.text-block {                    
   position: inherit;
   text-align: left;
   bottom: 20px;
@@ -79,34 +91,38 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.colonne {                                                                              /*Positionnement des recettes*/
+/*Positionnement des recettes : colonne de trois recettes*/
+.colonne1 {                                                                              
   display: grid;
   float: left;
   text-align: center;
   padding: 11px;
 }
 
-.ligne:after {                                                                          /*Positionnement des recettes*/
+.ligne1:after {                                                                          
   content: "";
   clear: both;
   display: table;
   text-align: center;
 }
+/*___________________________________________________________________________________________________________/*
+/*Livre d'or*/
 
-.slideshow-container {                                                                   /* Slideshow container */
+ /* Type Slideshow : defilement de plusieurs avis.................................................. */
+.defilement {                                                                  
   margin-top: 100px;
-  position: relative;
+  width: 100%;
+  position: absolute;
   background: #f1f1f1f1;
 }
 
-
-.mySlides {                                                                              /* Slides */
+.slides {                                                                              
   display: list-item;
   padding: 0px;
   text-align: center;
 }
 
-.prev, .next {                                                                            /* Suivant et précédent */
+.prev {                                                                            
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -120,10 +136,20 @@
   user-select: none;
 }
 
-.next {                                                                                      /* */
+.next {                                                                                      
   position: absolute;
   right: 0;
   border-radius: 3px 0 0 3px;
+  cursor: pointer;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
 
 .prev:hover, .next:hover {                                                                  /*  */
@@ -154,11 +180,11 @@
 
 q {font-style: italic;}                                                                       /* */
 
-/*  */
 .author {color: rgb(80, 82, 85);}
 
-                                                                                        /* LES RECETTES*/
-
+/*_______________________________________________________________________________________________________*/
+/* LES RECETTES*/
+/* Style polaroid avec passage vers les recettes suivantes et précédentes*/
 .polaroid {
   width: 45%;
   height: auto;
@@ -197,13 +223,11 @@ q {font-style: italic;}                                                         
   font-size: 30px;
 }
 
-/* */
 .colonne2 {
   display: flex;
   flex-wrap: wrap;
 }
 
-/* */
 .cote {
   flex: 30%;
   background-color: #f1f1f1;
@@ -220,4 +244,112 @@ q {font-style: italic;}                                                         
   background-color: #f1f1f1;
   color: rgb(0, 0, 0);
 }
+/*________________________________________________________________________________________________________*/
+/* CONTACT : le modal*/
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4); 
+}
 
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; 
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+input, textarea {
+  width: 100%; 
+  padding: 12px; 
+  border: 1px solid rgb(204, 204, 204); 
+  border-radius: 4px; 
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+  resize: vertical;
+}
+
+input:focus {
+
+  outline: none !important;
+  border-color: rgb(255, 187, 0);
+  box-shadow: 0 0 10px #719ECE;
+}
+
+input:required:invalid {
+  background: rgb(250, 136, 136);
+}
+
+input:required:valid {
+  background-color: rgb(108, 180, 112);
+}
+
+input[type=submit] {
+  background-color: #000000;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  flex : 50%;
+}
+
+input[type=submit]:hover {
+  background-color: #cccccc;
+}
+
+input[type=reset] {
+  background-color: #000000;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=reset]:hover {
+  background-color: #45a049;
+}
+
+.champ:focus {
+  border : 3px solid yellow
+}
+
+.container5 {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  }
+
+.rowf {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  margin: 0 -16px;
+}
+.col50 {
+  flex: 25%;
+  padding : 20px;
+}
